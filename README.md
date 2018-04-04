@@ -51,6 +51,26 @@ cask 'spotify'
 ```
 brew bundle install
 ```
-## 3. Setup Git & github
+## 3. Setup git & GitHub
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+## 3. Node.js
+
+We’re going to use Node Version Manager (nvm) to install Node.js.
+```
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+```
+Install the latest version.
+```
+nvm install node
+```
+Restart terminal and run the final command.
+```
+nvm use node
+```
+Confirm that you are using the latest version.
+```
+node -v
+```
+You can also test with `which node`, which will output your Node path and version number.
