@@ -9,7 +9,7 @@ Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-add App Store integration to Homebrew
+Add App Store integration to Homebrew
 ```
 brew install mas
 ```
@@ -56,7 +56,7 @@ Install the libraries and apps
 brew bundle install
 ```
 
-After you 'brew install postgresql' you can initialize or stop the postgresql daemon with these commands: 'brew services start postgresql' or 'brew services stop postgresql'. This also stnad for all other deamons - mongo,redis. See 'brew services list' for installed services. 
+After you `brew install postgresql` you can initialize or stop the postgresql daemon with these commands: `brew services start postgresql` or `brew services stop postgresql`. This also stnad for all other deamons - mongo,redis. See `brew services list` for installed services. 
 
 ## 3. Setup git & GitHub
 
@@ -88,7 +88,7 @@ npm install --global gulp-cli
 ```
 
 ## 5. Ruby
-Use rbenv to install Ruby versions out of the box. Run 'rbenv init' and add to the '~/.bash_profile'. Rbenv was previously installed in step 3.
+Use rbenv to install Ruby versions out of the box. Run `rbenv init` and add to the `~/.bash_profile`.
 ```
 eval "$(rbenv init -)"
 ```
