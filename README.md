@@ -1,6 +1,7 @@
 # MacOS HighSierra web development setup
 
 ## 1. Xcode
+Install Xcode from app store
 
 ## 2. Homebrew
 ```
@@ -50,3 +51,6 @@ cask 'spotify'
 ```
 brew bundle install
 ```
+## 3. Setup Git & github
+
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
