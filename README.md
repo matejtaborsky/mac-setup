@@ -9,11 +9,6 @@ Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Add App Store integration to Homebrew
-```
-brew install mas
-```
-
 ## 3. Brewfile
 Install all libraries and apps in one step via script
 ```
@@ -55,12 +50,33 @@ Install the libraries and apps
 ```
 brew bundle install
 ```
-
 After you `brew install postgresql` you can initialize or stop the postgresql daemon with these commands: `brew services start postgresql` or `brew services stop postgresql`. This also stnad for all other deamons - mongo,redis. See `brew services list` for installed services. 
 
 ## 3. Setup git & GitHub
-
-https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+1. Generate a new SSH key, use github email
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+2. Add your SSH key to the ssh-agent. Start the ssh-agent in the background.
+```
+eval "$(ssh-agent -s)"
+```
+Create config file
+```
+touch ~/.ssh/config
+```
+Add this
+```
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+```
+Finally Add your SSH private key to the ssh-agent
+```
+ssh-add -K ~/.ssh/id_rsa
+```
+3. Add the SSH key to your GitHub account.
 
 ## 3. Node.js
 We’re going to use Node Version Manager (nvm) to install Node.js.
@@ -113,4 +129,10 @@ gem install bundler
 Rehash the ruby env
 ```
 rbenv rehash
+```
+
+## 6. Heroku
+Authentificate heroku to use heroku CLI
+```
+heroku auth:login
 ```
