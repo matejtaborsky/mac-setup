@@ -1,9 +1,10 @@
 # MacOS HighSierra web development setup
 
 ## 1. Xcode
-Install Xcode from app store
+Install Xcode from app store.
 
 ## 2. Homebrew
+Install Homebrew
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
@@ -14,10 +15,11 @@ brew install mas
 ```
 
 ## 3. Brewfile
+Install all libraries and apps in one step via script
 ```
 touch Brewfile
 ```
-
+Edit `Brewfile` and paste/modify the list
 ```
 tap 'caskroom/cask'
 
@@ -49,16 +51,18 @@ cask 'sip'
 cask 'vlc'
 cask 'spotify'
 ```
-
+Install the libraries and apps
 ```
 brew bundle install
 ```
+
+After you 'brew install postgresql' you can initialize or stop the postgresql daemon with these commands: 'brew services start postgresql' or 'brew services stop postgresql'. This also stnad for all other deamons - mongo,redis. See 'brew services list' for installed services. 
+
 ## 3. Setup git & GitHub
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 ## 3. Node.js
-
 We’re going to use Node Version Manager (nvm) to install Node.js.
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
@@ -78,7 +82,6 @@ node -v
 You can also test with `which node`, which will output your Node path and version number.
 
 ## 4. Gulp
-
 Install Gulp globally.
 ```
 npm install --global gulp-cli
