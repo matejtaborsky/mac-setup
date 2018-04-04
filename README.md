@@ -24,6 +24,8 @@ tap 'caskroom/cask'
 brew 'git'
 brew 'npm'
 brew 'python'
+brew 'rbenv'
+brew 'rbenv-gemset'
 brew 'postgresql'
 brew 'mongo'
 brew 'redis'
@@ -80,4 +82,32 @@ You can also test with `which node`, which will output your Node path and versio
 Install Gulp globally.
 ```
 npm install --global gulp-cli
+```
+
+## 5. Ruby
+Use rbenv to install Ruby versions out of the box. Run 'rbenv init' and add to the '~/.bash_profile'. Rbenv was previously installed in step 3.
+```
+eval "$(rbenv init -)"
+```
+Close terminal, and check if rbenv is configured properly via rbenv-doctor script
+```
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+```
+```
+# List of Ruby versions: 
+rbenv install -l
+
+# Install Ruby version:
+rbenv install 2.5.1
+
+# Use local Ruby
+rbenv local 2.5.1
+```
+Install Bundler
+```
+gem install bundler
+```
+Rehash the ruby env
+```
+rbenv rehash
 ```
