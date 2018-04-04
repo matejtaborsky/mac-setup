@@ -74,3 +74,10 @@ Confirm that you are using the latest version.
 node -v
 ```
 You can also test with `which node`, which will output your Node path and version number.
+
+## 4. Gulp
+
+Install Gulp globally.
+```
+npm install --global gulp-cli
+```
