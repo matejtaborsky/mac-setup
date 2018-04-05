@@ -1,4 +1,4 @@
-# MacOS HighSierra web development setup
+# macOS Sierra FE web development setup
 
 ## 1. Xcode
 Install Xcode from app store.
