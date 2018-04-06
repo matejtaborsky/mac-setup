@@ -134,3 +134,23 @@ Authentificate heroku to use heroku CLI
 ```
 heroku auth:login
 ```
+
+## 7. Python and Venv
+Python3 Virtualenv Setup
+```
+pip3 install virtualenv
+```
+
+### Usage
+Creation of virtualenv:
+```
+virtualenv -p python3 <desired-path>
+```
+Activate the virtualenv:
+```
+source <desired-path>/bin/activate
+```
+Deactivate the virtualenv:
+```
+deactivate
+```
